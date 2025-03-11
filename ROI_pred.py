@@ -22,7 +22,7 @@ df = pd.get_dummies(df, columns=categorical_columns, drop_first=True)
 X = df.drop(columns=['ROI'])
 y = df['ROI']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=7)
 model = RandomForestRegressor(n_estimators=100, random_state=7)
 model.fit(X_train, y_train)
 
